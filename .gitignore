@@ -208,3 +208,6 @@ __marimo__/
 
 # Directoriries
 code/task_44/data
+code/task_44/edges_by_country
+edges_all.csv
+cache
