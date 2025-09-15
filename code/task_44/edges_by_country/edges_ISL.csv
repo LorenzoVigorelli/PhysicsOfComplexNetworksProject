@@ -1,0 +1,5 @@
+nodeID_from,nodeID_to,country_name,country_ISO3,weight
+1457,1457,Iceland,ISL,5801953.0
+1457,1458,Iceland,ISL,2881264.0
+1458,1457,Iceland,ISL,2881264.0
+1458,1458,Iceland,ISL,9227147.0

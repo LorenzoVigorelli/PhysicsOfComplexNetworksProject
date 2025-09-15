@@ -1,0 +1,5 @@
+nodeID_from,nodeID_to,country_name,country_ISO3,weight
+2041,2041,Malta,MLT,4550848.0
+2041,2042,Malta,MLT,1799265.0
+2042,2041,Malta,MLT,1799265.0
+2042,2042,Malta,MLT,45155565.0

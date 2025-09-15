@@ -1,0 +1,10 @@
+nodeID_from,nodeID_to,country_name,country_ISO3,weight
+256,256,Bosnia and Herzegovina,BIH,16710069.0
+256,257,Bosnia and Herzegovina,BIH,189161.0
+256,258,Bosnia and Herzegovina,BIH,318850.0
+257,256,Bosnia and Herzegovina,BIH,189161.0
+257,257,Bosnia and Herzegovina,BIH,909909.0
+257,258,Bosnia and Herzegovina,BIH,104852.0
+258,256,Bosnia and Herzegovina,BIH,318850.0
+258,257,Bosnia and Herzegovina,BIH,104852.0
+258,258,Bosnia and Herzegovina,BIH,1938608.0

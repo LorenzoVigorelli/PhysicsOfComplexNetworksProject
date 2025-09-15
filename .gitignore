@@ -208,6 +208,48 @@ __marimo__/
 
 # Directoriries
 code/task_44/data
-code/task_44/edges_by_country
 edges_all.csv
 cache
+code/task_34/data
+code/task_34/outputs_batch_20250910_004840
+code/task_34/exploreAndCreate.py
+code/task_38/outpustSIMPLERUNS
+code/task_38/outpustsss
+code/task_38/output
+code/task_38/outputScaleFree
+code/task_44/node_list.csv
+code/task_44/edges_all.csv
+
+# Ignora tutti i notebook Jupyter
+*.ipynb
+
+code/task_38/perc2.py
+code/task_38/perc3.py
+code/task_38/perc4.py
+code/task_38/perc.py
+
+code/task_34/sweep copy.py
+code/task_34/sweep2.py
+
+# --- Large data files (excluded from Git) ---
+
+# Geo data
+code/task_44/data/gadm_410.gpkg
+code/task_44/data/gadm_410-gpkg.zip
+code/task_44/data/us-county-boundaries.geojson
+code/task_44/data/gadm1_nuts3_counties-gadm1_nuts3_counties - FB Social Connectedness Index - October 2021.tsv
+
+# Cache / pickles
+code/task_44/cache/df_sci.pkl
+code/task_44/cache/df_edges_all.pkl
+code/task_44/cache/edges_per_country.pkl
+code/task_44/cache/gadm2_pts.pkl
+
+# CSV exports
+code/task_44/edges_all.csv
+code/task_44/edges_by_country/edges_USA.csv
+data/task_44/edges_by_country/edges_USA.csv
+code/task_44/edges_by_country/edges_DEU.csv
+data/task_44/edges_by_country/edges_DEU.csv
+
+# Other large files
