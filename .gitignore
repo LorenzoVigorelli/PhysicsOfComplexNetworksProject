@@ -253,3 +253,5 @@ code/task_44/edges_by_country/edges_DEU.csv
 data/task_44/edges_by_country/edges_DEU.csv
 
 # Other large files
+code/task_44/edges_by_country/*.csv
+data/task_44/edges_by_country/*.csv
