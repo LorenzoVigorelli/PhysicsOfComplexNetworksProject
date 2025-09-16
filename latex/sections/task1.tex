@@ -2,34 +2,33 @@
 
 \resp{Lorenzo Vigorelli}
  
-\section{Ultimate game}
-The Ultimatum Game captures \cite{sinatra2009ultimatum} how fairness and rejection of unfair proposals spread
-in a population, and is often linked to the emergence of cooperation.  
-It is a two-player game where the \emph{proposer} offers a division $p$ of a fixed
-reward, and the \emph{responder} accepts if $p \geq q$ or rejects otherwise.  
-If accepted, both share the reward; if rejected, both receive nothing.  
-The static solution (Nash equilibrium) predicts the proposer offering the
-minimum amount and the responder accepting it.
 
-On a network, each node represents a player interacting with its neighbors.  
-There are three strategy types:
+
+\section{Ultimatum game}
+The Ultimatum Game illustrates \cite{sinatra2009ultimatum} how fairness and the rejection of unfair offers can spread in a population, and it is often linked to the emergence of cooperation.  
+It is a two-player game: the \emph{proposer} decides how to split a fixed reward $p$, while the \emph{responder} accepts if $p \geq q$ (strategy) or rejects otherwise. If accepted, the division is implemented, if rejected, both players receive zero payoff.  
+The static (Nash) solution predicts that the proposer offers the minimum amount and the responder still accepts.  
+
+\noindent On a network, each node represents a player who interacts with its neighbors, playing both roles. Three types of strategies are considered:  
 \begin{itemize}
-    \item \textbf{Fair}: $q = p$
-    \item \textbf{Pragmatic}: $q = 1-p$ (same payoff regardless of role)
-    \item \textbf{Random}: random $(p,q)$
+    \item \textbf{Fair}: $q = p$ (the player demands exactly what it offers);  
+    \item \textbf{Pragmatic}: $q = 1-p$ (the player ensures the same payoff regardless of the role);  
+    \item \textbf{Random}: $(p,q)$ chosen at random.  
+\end{itemize}  
+
+\noindent After each round, payoffs are compared and strategies evolve according to one of two rules:  
+\begin{itemize}
+    \item \textbf{Natural selection:} player $i$ compares its payoff $\Pi_i$ 
+    with that of a neighbor $j$ and adopts $(p_j,q_j)$ with probability
+    \begin{equation}
+      P_{ij} = \frac{\Pi_j - \Pi_i}{2 \max \{ k_i, k_j \}}, \quad \text{if } \Pi_j > \Pi_i.
+    \end{equation}
+
+    \item \textbf{Social penalty:} the player with the lowest payoff and all its neighbors 
+    are replaced by new players with random strategies, while keeping the same network connections.  
 \end{itemize}
 
-At each time step, every player plays the game with all its neighbors in both
-roles. Strategies then evolve according to one of two update rules:
-\begin{itemize}
-    \item \textbf{Natural selection:} player $i$ compares its payoff $\Pi_i$ with
-    a random neighbor $j$ and adopts $(p_j,q_j)$ with probability
-    \[
-      P_{ij} = \frac{\Pi_j - \Pi_i}{2 \max \{ k_i, k_j \}} \quad \text{if } \Pi_j > \Pi_i.
-    \]
-    \item \textbf{Social penalty:} the lowest-payoff player and all its neighbors
-    are replaced by new players with random strategies, keeping the same links.
-\end{itemize}
+
 
 \section{Simulations}
 Each network has been tested with both update rules (natural selection, social
@@ -37,7 +36,7 @@ penalty) and different player types (A, B, C, mixed). Three network topologies
 were considered: Erdős-Rényi (ER), Barabási-Albert (BA), and an empirical
 network (Karate Club).  
 The following figures highlight the main effects of network structure, player
-type, and update rule. The remaining cases are reported in the appendix.
+type, and update rule. The remaining cases are reported in the appendix \ref{app:ultimatum}.
 
 \begin{figure*}[h!]
     \centering
@@ -59,7 +58,7 @@ type, and update rule. The remaining cases are reported in the appendix.
     \label{fig:ER_BA_Dp}
 \end{figure*}
 
-\textbf{ER vs BA under natural selection.}  
+\noindent\textbf{ER vs BA under natural selection.}  
 Figure~\ref{fig:ER_BA_Dp} shows the contrast between homogeneous and scale-free
 networks. In ER, strategies converge towards a stable plateau around
 intermediate offers $p$, reflecting uniform connectivity.  
@@ -87,7 +86,7 @@ while ER smooths strategies into collective equilibrium.
     \label{fig:BA_pq_C}
 \end{figure*}
 
-\textbf{Asymmetry between proposals and acceptance (BA, C players).}  
+\noindent\textbf{Asymmetry between proposals and acceptance (BA, C players).}  
 Figure~\ref{fig:BA_pq_C} shows that proposals $p$ remain variable and
 multimodal, stabilizing around several peaks (Fig.~\ref{fig:BA_Dp_C}), while
 acceptance thresholds $q$ collapse to very low values
@@ -116,7 +115,7 @@ retain heterogeneity.
     \label{fig:ER_p_by_degree_SP}
 \end{figure*}
 
-\textbf{Social penalty and node degree.}  
+\noindent\textbf{Social penalty and node degree.}  
 Figure~\ref{fig:ER_p_by_degree_SP} illustrates the degree dependence under
 social penalty. We show results by degree class because they highlight more
 clearly the contrast between low- and high-connectivity players: global
@@ -151,20 +150,16 @@ degree.
 Fair players (A) converge to intermediate offers in homogeneous settings but
 become asymmetric in heterogeneous ones.  
 Pragmatic players (B) show strong degree effects: low-degree nodes offer very
-little, while hubs adopt fairer values.  
-Random players (C) generate multimodal proposals, with acceptance thresholds
-collapsing to low values.
+little, while hubs adopt fairer values.   Random players (C) generate multimodal proposals, with acceptance thresholds collapsing to low values.
 
 \medskip
 \noindent\textbf{Update rule.}  
 Natural selection drives faster convergence and more uniform equilibria.  
 Social penalty converges more slowly but enforces degree-based differentiation,
 with high-degree nodes pressured into fairness and peripheral ones remaining
-selfish.
+selfish.\\
 
-\medskip
-Overall, fairness emerges not from strategies alone but from how they interact
-with network structure and update rules, with hubs acting as decisive drivers of
-global outcomes.
+\noindent\medskip
+Fairness emerges not from strategies alone but from how they interact with network structure and update rules, with hubs acting as decisive drivers of global outcomes.
 
 \newpage

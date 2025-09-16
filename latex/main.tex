@@ -37,14 +37,17 @@
 %\titleformat{\section}[hang]{\large\bfseries}{\textcolor{unipd}{Problema~\thesection}\hsp\textcolor{gray75}{|}\hsp}{0pt}{\large\bfseries\textcolor{gray25}}[\color{unipd}{\titlerule[1.0pt]}]
     
     % Bibliography 
-    \bibliographystyle{plainnat}
+    \bibliographystyle{unsrt}
     \bibliography{bibliography.bib}
     \appendix
     \chapter{Ultimatum Game}
+    \label{app:ultimatum}
     \input{sections/Ultimatum_game}
     \chapter{k-clique percolation}
+    \label{app:percolation}
     \input{sections/Percolation}
     \chapter{SCI}
+    \label{app:SCI}
     \input{sections/SCI}
 
 % End of the document
